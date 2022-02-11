@@ -18,8 +18,9 @@ class App extends Component {
   render() {
     return (
       <main>
+        <h1>Bucket List</h1>
         <Form addItem={this.addItem} />
-        {/* <AllItems /> */}
+        <AllItems items={ this.state.items } />
       </main>
     )
   }

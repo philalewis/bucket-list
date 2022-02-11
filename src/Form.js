@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Form.css'
 
 class Form extends Component {
   constructor() {
@@ -26,23 +27,25 @@ class Form extends Component {
   render() {
     return (
       <form>
-        <input
-          name='title'
-          type="text"
-          className="title-input"
-          placeholder="title"
-          value={this.state.title}
-          onChange={event => this.handleChange(event)}
-        />
+        <section className='inputs'>
+          <input
+            name='title'
+            type="text"
+            className="title-input"
+            placeholder="title"
+            value={this.state.title}
+            onChange={event => this.handleChange(event)}
+          />
 
-        <input
-          name='description'
-          type="text"
-          className="description-input"
-          placeholder="description"
-          value={this.state.description}
-          onChange={event => this.handleChange(event)}
-        />
+          <input
+            name='description'
+            type="text"
+            className="description-input"
+            placeholder="description"
+            value={this.state.description}
+            onChange={event => this.handleChange(event)}
+          />
+        </section>
 
         <button onClick={event => this.handleClick(event)}>ADD TO BUCKET LIST</button>
       </form>
